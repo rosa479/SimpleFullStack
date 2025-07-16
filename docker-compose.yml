@@ -1,0 +1,28 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    networks:
+      - webnet
+
+  backend:
+    build: ./backend
+    container_name: backend
+    networks:
+      - webnet
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - webnet
+
+networks:
+  webnet:
+
