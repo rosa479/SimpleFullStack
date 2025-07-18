@@ -26,6 +26,7 @@ docker compose up  —build
 ---
 
 ## Folder Structure
+```
 SimpleFullStack/
 ├── docker-compose.yml
 ├── frontend/
@@ -38,3 +39,4 @@ SimpleFullStack/
 │ ├── Dockerfile
 │ └── default.conf
 └── README.md
+```
